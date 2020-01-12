@@ -14,3 +14,9 @@ class AgeCalculationTest() {
     }
 }
 ```
+
+### Kotlin Test Assertions
+
+assertTrue
+assertNull
+assertEquals

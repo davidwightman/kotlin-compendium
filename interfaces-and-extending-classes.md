@@ -26,8 +26,22 @@ all classes in Kotlin are final, you cannot extend. you must make class open to 
 when extending a class, must call constructor passing in paramaters
 
 ```
-class AdvancedBookingManager: BasicBookingManager ("1234") {
+class AdvancedBookingManager: BasicBookingManager ("1234"), java.io.Closeable {
     override val version = "2.0"
     fun howManyBookings() = 10
+    override fun close() {}
 }
+```
+
+you can only extend from a single class like java. but you can have multiple interfaces. see above with Closeable
+
+### add functions to existing classes
+
+below adds addition functions to all strings in file
+
+```
+fun String.toSentenceCase() : String {
+    return this[0].toUpperCase + this.substring(1)
+}
+val my list = mutableListOf<Int>()
 ```
