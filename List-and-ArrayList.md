@@ -66,3 +66,16 @@ colors.containsAll(newColors)
 ```
 colors.indexOf("blue")
 ```
+- get last index of item in list 
+```
+colors.lastIndexOf("blue")
+```
+
+### ArrayList Functions
+```
+val colors = arrayListOf("blue", "red", "blue", "green")
+colors.set(1, "redder") // replace element at index 1
+val subColors = colors.subList(1, 2) // creates a sub ArrayList starting at first index up to second index
+colors.clear() // returns empty list []
+colors.isEmpty() // returns boolean 
+```
