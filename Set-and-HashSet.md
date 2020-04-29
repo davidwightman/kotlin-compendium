@@ -28,5 +28,22 @@ numbers.remove(53)
 ```
 
 ### Set Functions
+```
+val numbers = setOf(3,4,null,83)
+numbers.size // 4
+numbers.contains(84) // false
+val newNumbers = setOf(8456, 3)
+numbers.containsAll(newNumbers) // false
+numbers.isEmpty() //false
+```
 
 ### HashSet Functions
+- all set functions apply to HashSets
+```
+val numbers = setOf(3,4,null,83,56)
+val newNumbers = setOf(83,345,56)
+// retains all elements that are common between two sets
+numbers.retainAll(newNumbers) // true
+println(numbers) // [56, 83]
+```
+
