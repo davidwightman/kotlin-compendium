@@ -24,4 +24,7 @@ count.put( 4, "four")
 // combine two objects
 countMore = hashMapOf(Pair(20, "twenty))
 count.putAll(countMore)
+count.remove(20) // removes key and value
+count.replace(2, "twotwo") // replaces value at that key
+count.clear() // removes all elements from HashMap
 ```
