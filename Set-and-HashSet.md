@@ -45,5 +45,7 @@ val newNumbers = setOf(83,345,56)
 // retains all elements that are common between two sets
 numbers.retainAll(newNumbers) // true
 println(numbers) // [56, 83]
+numbers.clear() // []
+
 ```
 
