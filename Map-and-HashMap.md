@@ -28,3 +28,13 @@ count.remove(20) // removes key and value
 count.replace(2, "twotwo") // replaces value at that key
 count.clear() // removes all elements from HashMap
 ```
+
+### Map Functions
+```
+var count = mapOf(Pair(1, "one"), Pair(2, "two"))
+count.size // 2
+count.containsKey(2) // true
+count.containsValue("two") // true
+count.isEmpty() // false
+count.isNotEmpty() // true
+```
