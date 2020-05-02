@@ -25,17 +25,103 @@ val isEven = if (number % 2 === 0) 'is even' else 'is odd'
 
 #### arithmetic expressions
 - in conditional statements we can use any logical expression
-- in key word checks whether value is in a collection
+- in keyword checks whether value is in a collection
 ```
 "cat" in listOf("dog", "cat") // true
 ```
-#### logical expressions
 
 #### ranges
+#### in and !in keywords
+- in keyword aso allows you to check value in a range
+```
+5 in 1..10 // true
+15 in 1..10 // false
+```
+- use this in if statements
+- the !in keyword checks whether a value is not in a collection
+```
+"cat" !in listOf("dog", "cat") // false
+3 !in setOf(1, 5, 8, 34) // true
+5 !in 1..10 // false
+15 !in 1..10 // true
+if (number !in 1..9) println("number is not a single digit number")
+```
 
-#### in and !inkeywords
+#### Boolean returning functions
+- a function can be used in a conditional statement if it returns a boolean
+```
+val animals = arrayListOf<String>()
+if(animals.isEmpty()) {
+    animals.add("dog")
+}
+```
+- Some functions that you would not expect actually return boolean. For example, add() returns a boolean value true/
+- ctrl + space will show you if the function returns a boolean
+```
+if (animals.add("horse")) { // this conditional returns boolean
+    println("horse is added")
+}
+```
 
-### When condetional
+### When conditional
+- when conditional 
+- when statement (returning a value)
+- capturing the subject
+
+#### When
+- make decisions base on values of a variable or expression
+- if you only have one line then you can omit the curly braces
+- you can have nested when statements
+```
+val animal = "dog"
+when(animal){
+    "cat"-> {
+        // do something
+    }
+    "dog" ->{
+        // do something
+    }
+    else -> {
+        // do something
+    }
+}
+```
+
+#### When as a statement
+- when can return a value
+```
+var action: String = ""
+when (animal) {
+    "cat" -> action = "pet it"
+    else -> action = "google it"
+}
+
+var action = when(animal) { 
+    "cat" -> "pet it"
+    "dog", "bird" -> "pet it"
+    else -> "google it"
+}
+```
+
+#### Capturing the Subject
+- it's possible to capture the value in a when statement and use it in the block
+```
+val name = "Michelle"
+when(val length = name.length) {
+    in 1..5 -> println("a name with $length is short")
+    in 6..10 -> println("a name with $length characters is medium")
+    else -> println("a name with $length characters is long)
+}
+```
+- you can use ranges with characters as well
+```
+when(name[0]) {
+    in 'A'..'C' -> println("hello $name")
+    in 'D'..'F' -> println("hi $name")
+    else -> println("yo")
+}
+```
+
 
 ### For loops
 
