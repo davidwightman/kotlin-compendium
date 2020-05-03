@@ -122,7 +122,55 @@ when(name[0]) {
 }
 ```
 
-
 ### For loops
+
+#### for loops
+- executes a block of code for each element in an iterator
+```
+val collection
+for(item: String in collection) {
+    // do something
+}
+
+val animals = arrayListOf("cat", "dog", "mouse", "bear")
+for (animal in animals) {
+    println("feed the $animal")
+}
+
+// loop through range
+
+for (i in 1..12) {
+    val month = when(i) {
+        1 -> "January"
+        12 -> "December"
+        else -> ""
+    }
+    print("Month number $i is called $month")
+}
+```
+
+#### ranges in for loops
+```
+for (i in 1..3) {
+    println("Strike $i")
+}
+```
+- ranges can be ascending 1..10
+- descending: 10 downTo 0
+```
+for (i in 10 downTo 0) {
+    // do something
+}
+```
+- can skip steps: 10 downTo 0 step 3
+
+#### nested for loops
+```
+for(i in 1..5) {
+    for (j in 1..5) {
+        println("$i, $j")
+    }
+}
+```
 
 ### while loops
