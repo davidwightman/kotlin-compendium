@@ -174,3 +174,36 @@ for(i in 1..5) {
 ```
 
 ### while loops
+```
+var i = 0
+while (i < 10){
+    // do something
+    i++
+}
+```
+
+#### Do While Loops
+- very similar to while loop
+- the condition is evaluated at the end
+```
+var i = 0
+do {
+    // do something
+    i++
+} while (i < 10)
+
+var finished = false
+do {
+    println("enter a number greater than 100")
+    val input = readLine()?:""
+    var number = input.toInt()
+    if(number > 100) {
+        println("Thanks")
+        finished = true
+    } else {
+        println("$number is not greater than 100. please try again")
+    }
+} while (!finished)
+```
+
+#### Nested While Loops
