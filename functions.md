@@ -64,7 +64,29 @@ feedAnimal(setOf("dog", "bear", "cat"))
 ```
 
 ### Scope
+- a variable defined inside a function only exists in that function
 
 ### Varag
+- variable number of parameters (arguments)
+```
+fun sayHello(vararg names:String){
+    for (name in names){
+        println("Hello $name")
+    }
+}
+sayHello("Mary", "John", "Alex")
+```
 
 ### Local Functions
+- a local function is function inside a function
+```
+fun listAnimals(){
+    fun listOneAnimal(animal: String) {
+        println("I have a $animal)
+    }
+    var myAnimals = arrayListOf("cat", "dog", "horse")
+    for(animal in myAnimals){
+        listOneAnimal(animal)
+    }
+}
+```
