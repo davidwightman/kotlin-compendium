@@ -185,7 +185,61 @@ class Car {
 ```
 
 ### The this keyword
+- the "this" keyword refers to parameters of the class
+```
+class PostItNote(){
+    var message: String = "No message"
+
+    fun updateMessage(message: String) {
+        this.message = message
+    }
+}
+
+val postIt = PostItNote()
+println(postIt.messge)
+postIt.updateMessage("Meeting at 5")
+println(postIt.message)
+```
 
 ### the init block
+- the "init" block is run before any other code in the class
+```
+class Car {
+    var model: String? = "no model"
+    var topSpeed = 100
+
+    init {
+        println("Model $model top speed $topSpeed")
+    }
+}
+```
 
 ### the companion object
+- static code
+- makes class code available without the need for an object
+```
+class Car{
+    companion object{
+        fun getDrivingInstructions(): String {
+            return "Drive safe"
+        }
+    }
+}
+println(Car.getDrivingInstrictions())
+```
+
+### The four principles of OOP
+- a set of guidelines that make a language object-oriented
+- help developers write clean, maintainable code
+- help guide how a program is divided into components
+
+### Inheritance
+- Classes can inherit methods and parameters from other classes
+- same functionality but in one place
+
+### Encapsulation
+- hiding data and inner workings of a class from other classes that don't need to know how something is done
+
+### Abstraction
+
+### Polymorphism
