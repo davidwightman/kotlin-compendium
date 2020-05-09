@@ -9,7 +9,7 @@
 - a class is a blueprint for components (objects)
 - a class has
 -- variables
--- methods (fiunctions)
+-- methods (functions)
 ```
 class Car {
     var model: String? = null
@@ -25,8 +25,25 @@ class Car {
 }
 ```
 - name should start with capital letter
+- Class creates a type (example: Car)
 
 ### Objects
+- an instance of a class
+```
+val myCar = Car()
+val yourCar = Car()
+```
+- an object can change its values without impacting other objects from the same class
+```
+myCar.model = "BMW"
+yourCar.model = "Toyota"
+```
+- an object can call its methods
+```
+yourCar.start()
+yourCar.drive(75)
+```
+
 
 ### Creating classes and objects
 
