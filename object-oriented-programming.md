@@ -241,5 +241,7 @@ println(Car.getDrivingInstrictions())
 - hiding data and inner workings of a class from other classes that don't need to know how something is done
 
 ### Abstraction
+- a common feature of 2 classes should be abstracted in a third class
 
 ### Polymorphism
+- same name many forms
