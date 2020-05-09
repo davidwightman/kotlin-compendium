@@ -44,7 +44,42 @@ yourCar.start()
 yourCar.drive(75)
 ```
 
+### The "Object" Construct
+- when a class is instantiated the instance is called an object
+- an object construct is a static class. all methods and variables can be accesed without an instance
+- this is a Singleton - one instance of a class
+```
+object DatabaseAccess {
+    var connected = false
+    fun connect(){
+        connected = true
+        println("connected to database")
+    }
+    fun disconnect(){
+        connected = false
+        println("Disconnected from database")
+    }
+}
+```
 
 ### Creating classes and objects
+- in kotlin, almost everything is an Object
+- The following types are all Objects: String, Int, Float, Boolean, ArrayList, HashMap
+- Collection, List are interfaces (a type of object)
+- Object definitions (classes) can contain references to other objects
+```
+val myGarage = Garage()
+myGarage.car.drive()
+
+class Car {
+    fun drive () {
+        println("drive")
+    }
+}
+
+class Garage {
+    val car = MyCar()
+}
+```
 
 ### Inheritance
