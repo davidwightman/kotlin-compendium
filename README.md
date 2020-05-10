@@ -17,6 +17,7 @@
 - operators and booleans
 - packages
 - set and hashset
+- standard functions
 - unit-testing
 - user-input
 - variables
