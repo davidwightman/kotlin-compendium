@@ -265,9 +265,21 @@ carol.say("Hi") // daughter says Hi
 
 ### Encapsulation
 - hiding data and inner workings of a class from other classes that don't need to know how something is done
+- variables and functions are available only in the block of code they are declared in
+- Classes can change the scope of their variables / functions
+- Modifiers
+```
+-- private - visible inside the class only
+-- protected - visible inside class and inheriting classes
+-- internal - visible inside the package
+-- public - visible to anyone accessing the class
+```
+- the default is set to public
 
 ### Abstraction
 - a common feature of 2 classes should be abstracted in a third class
+- a functionality that is not associated with an instance (object) should be abstracted away
+- if 2 classes share common  features, create a super class that contains the common features and inherit from it
 
 ### Polymorphism
 - same name many forms
