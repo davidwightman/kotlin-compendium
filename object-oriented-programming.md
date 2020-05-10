@@ -280,6 +280,60 @@ carol.say("Hi") // daughter says Hi
 - a common feature of 2 classes should be abstracted in a third class
 - a functionality that is not associated with an instance (object) should be abstracted away
 - if 2 classes share common  features, create a super class that contains the common features and inherit from it
+- use interfaces 
+- the key abstract means class cannot be instantiated only extended from
+ ```
+abstract class Container {
+     fun pour(){
+         println("pouring liquid)
+     }
+ }
+
+ class Jug: Container() {
+ }
+ 
+ class Bottle: Container(){
+ }
+ ```
+ - reduces code duplication
+ - structures code dbased on real world concepts
+ - helps remove irrelevant code and puts it in a separate class
 
 ### Polymorphism
 - same name many forms
+- a method/function can do different things in different situations
+- Dynamic -> method overriding
+- Static -> method overloading
+```
+open class Mom(){
+    open fun say(message: String) {
+        println("mom says $message")
+    }
+}
+
+class Daughter: Mom(){
+    override fun say(message: String) {
+        println("daughter says $message")
+    }
+}
+```
+- Method Overloading
+```
+class Mom(){
+    fun say(message: String){
+        println("mom says $message")
+    }
+
+    fun say(){
+        println("mom says hi")
+    }
+
+    fun say(message: String, times: Int){
+        var i = 0
+        while (i<3){
+            println(message)
+            i++
+        }
+    }
+}
+```

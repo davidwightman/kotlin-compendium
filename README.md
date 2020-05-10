@@ -1,3 +1,22 @@
 ## Kotlin Compendium
 
+- Break and continue
+- collections
+- exceptions and try catch
+- flow control
+- functions
+- handling exceptions
+- interfaces and extending classes
+- interfaces
+- lambda functions
+- list and arraylist
+- map and hashmap
+- nullability
+- numbers
+- object oriented programming
+- operators and booleans
+- packages
+- set and hashset
+- unit-testing
+- user-input
 - variables
