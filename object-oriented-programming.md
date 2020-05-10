@@ -236,6 +236,32 @@ println(Car.getDrivingInstrictions())
 ### Inheritance
 - Classes can inherit methods and parameters from other classes
 - same functionality but in one place
+- to make a class inheritable, use the open keyword
+```
+open class Mom(nativeTongue: String) {
+    open val hairColor = "brown"
+    val eyeColor = "blue"
+
+    open fun say(message: String) {
+        println("mom says $message")
+    }
+}
+
+class Daughter(nativeTongue: String): Mom(nativeTongue){
+    override val hairColor = "blonde"
+    override fun say(message: String){ 
+        println("daughter says $message")
+    }
+}
+
+val carol = Daughter("french")
+println(carol.hairColor) // blonde
+carol.say("Hi") // daughter says Hi
+```
+- if the class has multiple constructors, at least one must be initialized
+- "Daughter" classes can override methods in "mother" classes using the override keyword if they are marked as open
+- "Daughter" classes can access "mother" class methods and variables using the super keyword
+
 
 ### Encapsulation
 - hiding data and inner workings of a class from other classes that don't need to know how something is done
