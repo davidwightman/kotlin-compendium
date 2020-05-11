@@ -46,3 +46,48 @@ name?.let{
     println(name)
 }
 ```
+
+### with Function
+- perform a block of code on an object
+- the context is available as 'this' (the 'this' keyword can be ommitted)
+- can access object variables and methods
+- typical use case: perform some initialization on an object, perform a sequence of actions on an object
+```
+fun main(args: Array<String>){
+    with(Car()) {
+        speed = 80
+        drive()
+        println("Car is driving")
+    }
+}
+
+class Car {
+    var speed = 50
+    fun drive(){
+        println("Driving at $speed")
+    }
+}
+```
+- like let but in with you pass the object into the with context and you use the object to call methods or set variables
+
+### run function
+- same as with but invokes as an extension function
+- useful when you need a lambda that returns a result
+- can be used to limit the scope of variables
+- two ways to use the function
+```
+Car().run {
+    speed = 80
+    drive()
+    println("Car is driving")
+    this
+}
+
+// in this case car is only available in this scope 
+run {
+    val car = Car()
+    car.speed = 80
+    car.drive()
+    println("Car is driving")
+}
+```
