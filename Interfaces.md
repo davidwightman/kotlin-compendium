@@ -2,7 +2,7 @@
 - an interface is a definition of a part of a class
 - defines what a class/object can do
 - objects can access other objects through their interfaces
-- very similart to abstract class
+- very similar to abstract class
 - can be used as variable types
 ```
 inteface Oven {

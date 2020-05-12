@@ -91,3 +91,49 @@ run {
     println("Car is driving")
 }
 ```
+
+### apply function
+- can be used to apply some functionality and return a result
+- returns the initial object
+- common use case in applying configuration to an object creation
+```
+val myCar = Car().apply {
+    speed = 80
+    color = "red"
+    startCar()
+}
+println(myCar::class.java)
+```
+
+### also function
+- used for performing some additional actions on an object
+- commmon use case is adding some actions that don't affect the object such as logging or debugging information
+- removing an also block should not affect the execution of a program
+```
+Car().apply{
+    speed = 80
+    run()
+    println("car is running")
+}
+.also {
+    println("the car has been started $speed")
+}
+```
+
+### takeIf and takeUnless
+
+#### takeIf
+- returns the object if the predicate values to true
+- otherwise returns null
+```
+val number - Random.nextInt(100)
+val evenOrNull = number.takeIf{it % 2 == 0}
+```
+
+#### takeUnless
+- returns the object if the predicate values to false
+- otherwise returns null
+```
+val number - Random.nextInt(100)
+val evenOrNull = number.takeUnless{it % 2 == 0}
+```

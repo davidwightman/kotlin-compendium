@@ -281,7 +281,7 @@ carol.say("Hi") // daughter says Hi
 - a functionality that is not associated with an instance (object) should be abstracted away
 - if 2 classes share common  features, create a super class that contains the common features and inherit from it
 - use interfaces 
-- the key abstract means class cannot be instantiated only extended from
+- the keyword abstract means class cannot be instantiated only extended from
  ```
 abstract class Container {
      fun pour(){
