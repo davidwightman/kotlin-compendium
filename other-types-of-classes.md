@@ -56,7 +56,56 @@ println(user4.toString()) // User(name=John, email=david@gmail.com)
 ```
 
 ### Enum Classes
+- stands for enumeration
+- define a collection of constants
+- the constants defined are objects
+- the constants have properties
+```
+enum class Color(
+    RED,
+    GREEN,
+    BLUE
+)
+
+fun decide(color: Color) {
+    when(color){
+        Color.RED -> { println("You chose red")}
+        Color.GREEN -> { println("You chose green")}
+        Color.BLUE -> { println("You chose blue")}
+    }
+}
+```
+- enum constants can be initialized
+- constants have properties like name and ordinal
+```
+enum class Color(val timesUsed: Int){
+    RED(34),
+    GREEN(12),
+    BLUE(64)
+}
+
+Color.GREEN.timesUsed // 12
+Color.RED.name  // RED
+Color.BLUE.ordinal //2
+```
 
 ### Sealed Classes
+- define a restricted hierarchy
+- abstract by default so cannot be instantiated
+- useful in when expressions
+```
+abstract class Plant
+sealed class Fruit: Plant()
+class Apple: Fruit()
+sealed class Vegetable: Plant()
+class Potato: Vegetable()
+fun getPlant(): Plant = Apple()
+
+val somePlant = getPlant()
+when(somePlant){
+    is Fruit -> println("Sweet")
+    is Vegetable -> println("Tasty")
+}
+```
 
 ### Nested Classes
