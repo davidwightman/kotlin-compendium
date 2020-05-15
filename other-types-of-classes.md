@@ -109,3 +109,26 @@ when(somePlant){
 ```
 
 ### Nested Classes
+- a class created inside another class
+- uses the inner keyword
+- the inner class can access variable and methods of the outer class through the this keyword
+- to access inner variables from the outer class, create an instance of the nested class
+```
+class Carr{
+    val engine = Engine
+    var speed = 100
+    fun drive(){
+        engine.run()
+        println("Driving at $speed")
+    }
+
+    inner class Engine{
+        val rpm = 300
+        fun run(){
+            this@Car.speed = 150
+            this@Car.drive()
+            println("Engine running")
+        }
+    }
+}
+```

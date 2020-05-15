@@ -3,6 +3,7 @@
 - Break and continue
 - collections
 - exceptions and try catch
+- extensions
 - flow control
 - functions
 - handling exceptions
