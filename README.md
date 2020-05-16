@@ -17,6 +17,7 @@
 - numbers
 - object oriented programming
 - operators and booleans
+- other concepts
 - packages
 - set and hashset
 - standard functions
