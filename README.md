@@ -6,6 +6,7 @@
 - extensions
 - flow control
 - functions
+- generics
 - handling exceptions
 - interfaces and extending classes
 - interfaces
